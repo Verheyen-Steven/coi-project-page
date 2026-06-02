@@ -257,6 +257,7 @@ h3{
 .cta-action{
   border-left: 1px solid var(--border);
   padding-left: 1rem;
+  text-align: center;
 }
 
 .button{
