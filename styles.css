@@ -293,6 +293,26 @@ h3{
 
 .button-block{ width: 100%; }
 
+.qr{
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.qr-image{
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  display: block;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #fff;
+  padding: 8px;
+}
+
 .people{
   margin-top: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
