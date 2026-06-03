@@ -357,7 +357,15 @@
     <div class="container footer-row">
       <p class="muted small">© <span id="year"></span> Conflict of Interest Research . Psychology of Science Collaboration Hub</p>
       <p class="muted small">
-        <a href="mailto:verheyen@essb.eur.nl">verheyen@essb.eur.nl</a>
+        <!--
+          Email is assembled by main.js from the base64 value below so the
+          plain address never appears in the served HTML (a small deterrent
+          against scrapers). To change it, base64-encode the new address,
+          e.g. in a browser console: btoa("name@example.com")
+        -->
+        <a class="contact-email" data-email="dmVyaGV5ZW5AZXNzYi5ldXIubmw=" rel="nofollow">
+          <noscript>verheyen [at] essb [dot] eur [dot] nl</noscript>
+        </a>
         <span aria-hidden="true">·</span>
         <a href="https://github.com/05d762de69/" target="_blank" rel="noopener">GitHub</a>
       </p>

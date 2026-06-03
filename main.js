@@ -19,6 +19,25 @@ if (toggle && list) {
 const year = document.querySelector("#year");
 if (year) year.textContent = new Date().getFullYear();
 
+// Assemble the contact email at runtime. The address is stored base64-encoded
+// in the markup and the "mailto:" scheme is built from pieces, so the plain
+// address never appears as scrapeable text in the served HTML.
+const emailLink = document.querySelector(".contact-email");
+if (emailLink && emailLink.dataset.email) {
+  let address = "";
+  try {
+    address = atob(emailLink.dataset.email);
+  } catch (e) {
+    address = "";
+  }
+
+  if (address) {
+    emailLink.textContent = address;
+    emailLink.setAttribute("href", "mai" + "lto:" + address);
+    delete emailLink.dataset.email;
+  }
+}
+
 const peopleSection = document.querySelector("#people");
 const peopleGrid = document.querySelector("#people-grid");
 const peopleToggle = document.querySelector("#people-toggle");
